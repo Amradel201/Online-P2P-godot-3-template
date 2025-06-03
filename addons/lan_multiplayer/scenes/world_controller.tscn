@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://addons/lan_multiplayer/scripts/world_controller.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.419608, 0.419608, 0.419608, 1 )
+
+[sub_resource type="Theme" id=2]
+Button/fonts/font = null
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = null
+Button/styles/normal = null
+Panel/styles/panel = SubResource( 1 )
+
+[node name="world_controller" type="Node" groups=["worldcont"]]
+script = ExtResource( 1 )
+
+[node name="leaderboard" type="Control" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+
+[node name="Panel" type="Panel" parent="leaderboard"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -150.0
+margin_right = 250.0
+margin_bottom = 150.0
+theme = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="room" type="VBoxContainer" parent="leaderboard"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = -150.0
+margin_right = 250.0
+margin_bottom = 150.0
+mouse_filter = 0
+theme = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Label" type="Label" parent="leaderboard/room"]
+margin_right = 500.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+text = "LEADERBOARD"
+align = 1
+valign = 1
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Button" type="Button" parent="leaderboard"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -250.0
+margin_top = 110.0
+margin_right = 250.0
+margin_bottom = 150.0
+text = "BACK"
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="timer" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -22.0
+margin_top = 10.0
+margin_right = -7.0
+margin_bottom = 24.0
+rect_scale = Vector2( 3, 3 )
+text = "0s"
+
+[node name="Timer" type="Timer" parent="timer"]
+
+[connection signal="timeout" from="timer/Timer" to="." method="_on_Timer_timeout"]
