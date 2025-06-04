@@ -1,6 +1,6 @@
 # Godot 3 P2P Multiplayer Template (No Server Needed)
 
-This is a Godot 3.x ready-to-use template that allows you to easily create **online multiplayer games** using **Godot's High-Level Multiplayer API** without needing a dedicated server.
+This is a Godot 3.x ready-to-use template that allows you to easily create **online** or **LAN** multiplayer games using **Godot's High-Level Multiplayer API** without needing a dedicated server.
 
 It uses **peer-to-peer (P2P)** networking and **UPnP (Universal Plug and Play)** for automatic port forwarding, allowing direct connections between players and making online multiplayer development easier and more accessible.
 
@@ -8,7 +8,7 @@ It uses **peer-to-peer (P2P)** networking and **UPnP (Universal Plug and Play)**
 ---
 
 ## 🌐 Features
-
+- ✅ online and LAN multiplayer
 - ✅ Peer-to-peer (P2P) connection system
 - ✅ UPnP automatic port forwarding support
 - ✅ IP encryption if online.
@@ -28,7 +28,7 @@ It uses **peer-to-peer (P2P)** networking and **UPnP (Universal Plug and Play)**
 2. Run the example scene
 3. One player clicks **"Host"**
 4. Other player enters host's IP and clicks **"Join"**
-5. Enjoy direct multiplayer with no server required
+5. run any function by rpc to run it in all the devices
 
 ## 🌍 الشرح باللغة العربية
 
@@ -36,7 +36,7 @@ It uses **peer-to-peer (P2P)** networking and **UPnP (Universal Plug and Play)**
 يعتمد القالب على تقنية **الاتصال من نظير إلى نظير (P2P)**، ويستخدم بروتوكول **UPnP (Universal Plug and Play)** لفتح المنافذ تلقائيًا عند الحاجة، مما يجعل الاتصال بين اللاعبين مباشرًا وسهلًا.
 
 ### الميزات:
-
+- تعدد لاعبين اونلاين او في الشبكه المحليه
 - يمكن لأي لاعب استضافة اللعبة، بينما يقوم اللاعب الآخر بالاتصال مباشرة عبر عنوان الـ IP.
 - يدعم الكشف التلقائي عن قطع الاتصال أو حدوث تأخير في الشبكة.
 - يتضمن مشروعًا تجريبيًا بسيطًا يُظهر كيفية استخدام النظام خطوة بخطوة.
