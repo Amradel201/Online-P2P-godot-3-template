@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/lan_multiplayer/scenes/world_controller.tscn" type="PackedScene" id=1]
+[ext_resource path="res://objects/player.tscn" type="PackedScene" id=2]
+
+[node name="world" type="Node2D"]
+
+[node name="world_controller" parent="." instance=ExtResource( 1 )]
+player_scene = ExtResource( 2 )
+spawn_path = NodePath("..")
+spawn_position = Vector2( 500, 500 )
